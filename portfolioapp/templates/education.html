@@ -1,0 +1,111 @@
+{% extends "header.html" %}
+{% load static %}
+
+{% block title %} Abhay | Education {% endblock title %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/education.css' %}">
+
+<div class="page-fade-in">
+<section>
+    <h2>Why hire me?</h2>
+    {% comment %} <p class="description">
+        Passionate Python developer with a strong problem-solving mindset, solid foundation in programming, and hands-on experience in Django. Eager to take on challenges, build impactful projects, and grow into a strong tech professional.
+    </p> {% endcomment %}
+
+    <div class="main-wrapper">
+        <!-- Left Column (Buttons) -->
+        <div class="left-column">
+            <div class="buttons-container">
+                <button onclick="showSection('education')" class="tab-button active" id="btn-education">Education</button>
+                <button onclick="showSection('experience')" class="tab-button" id="btn-experience">Experience</button>
+                <button onclick="showSection('skills')" class="tab-button" id="btn-skills">Skills</button>
+                <button onclick="showSection('about')" class="tab-button" id="btn-about">About Me</button>
+            </div>
+        </div>
+
+        <!-- Right Column (Content) -->
+        <div class="right-column">
+            <!-- EDUCATION SECTION -->
+            <div class="tab-section" id="education-section" style="display: block;">
+                <div class="cards-container">
+                    <div class="card"> <div class="year">2021 - 2025</div> <div class="title">B.Tech in Computer Engineering</div> <div class="place">RK University, Rajkot | CGPA: 7.87/10</div> </div>
+                    <div class="card"> <div class="year">2021</div> <div class="title">12th [H.S.C] - Science Stream</div> <div class="place">Cadmus School, Jamnagar | 51.20%</div> </div>
+                    <div class="card"> <div class="year">2019</div> <div class="title">10th [S.S.C] - Gujarat Board</div> <div class="place">Cadmus School, Jamnagar | 63.50%</div> </div>
+                </div>
+            </div>
+
+            <!-- EXPERIENCE SECTION -->
+            <div class="tab-section" id="experience-section" style="display: none;">
+                <div class="experience-wrapper">
+                    <h3>Internship Experience</h3>
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <h4>Python Developer Intern</h4>
+                            <span class="duration">Bhavin Technolabs Pvt. Ltd. (Rajkot)</span>
+                            <span class="date">15 Jan 2025 – 15 July 2025 (6 months)</span>
+                        </div>
+                        <ul class="experience-points">
+                            <li>Learnt Python from zero, mastering core concepts like loops, functions, OOP.</li>
+                            <li>Self-learned Java fundamentals for versatility in backend logic.</li>
+                            <li>Explored Django framework for building dynamic web apps.</li>
+                            <li>Worked with PostgreSQL database & SQL fundamentals.</li>
+                            <li>Created a basic Django To-Do app:
+                                <ul class="sub-list">
+                                    <li>Add, update, and delete tasks</li>
+                                    <li>Mark as completed or pending</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SKILLS SECTION -->
+            <div class="tab-section" id="skills-section" style="display: none;">
+                <div class="skills-wrapper">
+                    <h3>My Skills</h3>
+                    <p class="description">Skilled in modern frontend and backend tools with a passion for clean UI and logical architecture.</p>
+                    <div class="skills-grid">
+                        <div class="skill-box"><img src="{% static 'icons/python.png' %}" alt="Python"></div>
+                        <div class="skill-box"><img src="{% static 'icons/java.png' %}" alt="Java"></div>
+                        <div class="skill-box"><img src="{% static 'icons/django.png' %}" alt="Django"></div>
+                        <div class="skill-box"><img src="{% static 'icons/sql-server.png' %}" alt="SQL"></div>
+                        <div class="skill-box"><img src="{% static 'icons/html.png' %}" alt="HTML"></div>
+                        <div class="skill-box"><img src="{% static 'icons/css-3.png' %}" alt="CSS"></div>
+                        <div class="skill-box"><img src="{% static 'icons/github.png' %}" alt="GitHub"></div>
+                        <div class="skill-box"><img src="{% static 'icons/youtube.png' %}" alt="YouTube"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ABOUT SECTION -->
+            <div class="tab-section" id="about-section" style="display: none;">
+                <div class="about-wrapper">
+                    <div class="info-columns">
+                        <div class="info-item"><span class="label">Full Name:</span><span class="value">Abhay Yadav</span></div>
+                        <div class="info-item"><span class="label">Phone:</span><span class="value">+91 63521 84369</span></div>
+                        <div class="info-item"><span class="label">Email:</span><span class="value">abhayyadav19110@gmail.com</span></div>
+                        <div class="info-item"><span class="label">GitHub:</span><span class="value"><a href="https://github.com/abhay-yadav01" target="_blank">abhay-yadav01</a></span></div>
+                        <div class="info-item"><span class="label">Experience:</span><span class="value">6 Months (Intern)</span></div>
+                        <div class="info-item"><span class="label">Nationality:</span><span class="value">Indian</span></div>
+                        <div class="info-item"><span class="label">Freelance:</span><span class="value">Available</span></div>
+                        <div class="info-item"><span class="label">Languages:</span><span class="value">English, Hindi, Gujarati</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+<script>
+    function showSection(section) {
+        const allSections = ['education', 'experience', 'skills', 'about'];
+        allSections.forEach(sec => {
+            document.getElementById(`${sec}-section`).style.display = (sec === section) ? 'block' : 'none';
+            document.getElementById(`btn-${sec}`).classList.toggle('active', sec === section);
+        });
+    }
+</script>
+{% endblock %}

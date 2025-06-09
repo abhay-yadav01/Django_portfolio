@@ -1,0 +1,41 @@
+{% extends "header.html" %}
+{% load static %}
+
+{% block content %}
+<section class="hero-section fade-in-up">
+
+    <div class="left-content slide-in-left">
+        <p class="subtitle">Software Developer</p>
+        <h1>Hello I’m <span><br>Abhay Yadav</span></h1>
+        <p class="description">
+            Skilled in Python programming with basic Django knowledge.<br>
+                Excited to explore Odoo and share tech content as a YouTuber.
+        </p>
+
+        <div class="buttons">
+            <a href="{% static 'files/Abhay_Yadav_CV.pdf' %}" download class="download-btn">Download CV</a>
+            <div class="social-icons">
+                <a href="https://github.com/abhay-yadav01"><img src="{% static 'icons/icons8-github.png' %}" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/abhay-yadav-58b552366/"><img src="{% static 'icons/linkedin.png' %}" alt="LinkedIn"></a>
+                <a href="https://www.youtube.com/@my_vibes0o1"><img src="{% static 'icons/icons8-youtube.png' %}" alt="YouTube"></a> 
+            </div>
+        </div>
+    </div>
+
+    <div class="right-content slide-in-right">
+        <div class="profile-glow">
+            <img src="{% static 'images/profile.gif' %}" alt="Profile Image">
+        </div>
+    </div>
+
+</section>
+
+<section class="info-section fade-in-up-delayed">
+    <div class="info-box"><strong>6</strong><span>Month of<br>Experience</span></div>
+    <div class="info-box"><strong>2</strong><span>Projects<br>Completed</span></div>
+    <div class="info-box"><strong>8</strong><span>Technologies<br>Mastered</span></div>
+    <div class="info-box"><strong>500</strong><span>Code<br>Commits</span></div>
+</section>
+
+
+{% endblock %}

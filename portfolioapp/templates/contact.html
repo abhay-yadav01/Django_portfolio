@@ -1,0 +1,60 @@
+{% extends "header.html" %}
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Contact | Abhay</title>
+        <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="contact-container">
+            <div class="form-section">
+                <h2>Let's work together</h2>
+                <p>I’m a passionate Python developer with strong skills in programming, OOP, SQL, file handling, and database connections. I also create tech content as a YouTuber. Let’s build something awesome together!</p>
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="input-row">
+                        <input type="text" placeholder="Firstname" required>
+                        <input type="text" placeholder="Lastname" required>
+                    </div>
+                    <div class="input-row">
+                        <input type="email" placeholder="Email address" required>
+                        <input type="text" placeholder="Phone number">
+                    </div>
+                    <select required>
+                        <option value="">Select a service</option>
+                        <option value="web">Web Development</option>
+                        <option value="design">UI/UX Design</option>
+                    </select>
+                    <textarea placeholder="Type your message here." rows="5" required></textarea>
+                    {% comment %} {{ form.as_p }} {% endcomment %}
+            <button type="submit">Send message</button>
+        </form>
+    </div>
+    
+    <div class="info-section">
+        <div class="info-block">
+            <img src="{% static 'icons/phone-call.png' %}" alt="Phone Icon">
+            <p>(+91) 63521 84369</p>
+        </div>
+        <div class="info-block">
+            <img src="{% static 'icons/email.png' %}" alt="Email Icon">
+            <p>abhayyadav19110@email.com</p>
+        </div>
+        <div class="info-block">
+            <img src="{% static 'icons/location.png' %}" alt="Location Icon">
+            <p>Sadhna colony, L-22, FlateNo.2493,Jamnagar 361005</p>
+        </div>
+    </div>
+</div>
+
+ <script src="{% static 'js/contact.js' %}"></script>
+</body>
+</html>
+
+{% endblock %}

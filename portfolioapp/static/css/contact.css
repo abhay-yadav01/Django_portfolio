@@ -1,0 +1,178 @@
+/* ======= Base Reset ======= */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0d0d1a;
+    font-family: 'Space Grotesk', sans-serif;
+    color: #e0e0e0;
+}
+
+/* ======= Container Layout ======= */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ======= Form Section ======= */
+.form-section {
+    flex: 1;
+    min-width: 320px;
+    max-width: 550px;
+    background: rgba(21, 21, 40, 0.85);
+    border: 1px solid rgba(0, 255, 153, 0.2);
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 0 25px rgba(0, 255, 153, 0.05);
+    backdrop-filter: blur(5px);
+    animation: fadeSlide 1s ease-out forwards;
+}
+
+.form-section h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    color: #00ff99;
+    margin-bottom: 10px;
+}
+
+.form-section p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #c4c4c4;
+}
+
+/* ======= Form Elements ======= */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+input, select, textarea {
+    flex: 1;
+    background-color: #111827;
+    border: 1px solid #2d3748;
+    padding: 14px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #00ff99;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 255, 153, 0.3);
+}
+
+select {
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* ======= Submit Button ======= */
+button {
+    align-self: flex-start;
+    background: #00ff99;
+    border: none;
+    color: #000;
+    padding: 12px 30px;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #00e68a;
+}
+
+/* ======= Info Section ======= */
+.info-section {
+    flex: 0.8;
+    min-width: 280px;
+    background: #111827;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    animation: fadeSlideRight 1.2s ease-out forwards;
+}
+
+.info-block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #1a1a2e;
+    padding: 15px 20px;
+    border-radius: 12px;
+    border-left: 4px solid #00ff99;
+    box-shadow: 0 0 10px rgba(0, 255, 153, 0.05);
+}
+
+.info-block img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1);
+}
+
+.info-block p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #e6e6e6;
+}
+
+/* ======= Animations ======= */
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeSlideRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ======= Responsive ======= */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 40px 20px;
+    }
+
+    .form-section, .info-section {
+        width: 100%;
+    }
+
+    .input-row {
+        flex-direction: column;
+    }
+}

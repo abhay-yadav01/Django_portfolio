@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Abhay | Portfolio{% endblock %}</title>
+    
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="fade-in">
+        <div class="logo">Abhay<span>.</span></div>
+
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}" class="btn">Home</a></li>
+                <li><a href="{% url 'about' %}" class="btn">About</a></li>
+                <li><a href="{% url 'education' %}" class="btn">Education</a></li>
+                <li><a href="{% url 'contact' %}" class="btn">Contact</a></li>
+                <li><a href="#" class="btn">Hire Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+     <!-- This is where index.html or other pages inject their content -->
+    {% block content %}
+    
+    {% endblock %}
+
+</body>
+</html>
