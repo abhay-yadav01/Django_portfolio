@@ -30,13 +30,15 @@
 
 ## 📌 Live Demo  
 
-<video controls src="Demo_portfolio.mp4" title="
-"></video>
+
 🔗 [Click to View Live Portfolio](https://abhay-yadav01.github.io/portfolio/)
 
 
 
 ## 🎬 Demo Preview
+
+<video controls src="Demo_portfolio.mp4" title="
+"></video>
 
 ![image](https://github.com/user-attachments/assets/7d3ccea5-e8eb-4938-b3d3-9eee0ba6484c)
 
