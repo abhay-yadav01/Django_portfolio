@@ -4,33 +4,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <!-- Dynamic Title Block (each page can override this) -->
     <title>{% block title %}Abhay | Portfolio{% endblock %}</title>
     
-    <!-- External Stylesheet -->
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/about.css' %}">
-    
 </head>
+
 <body>
 
-    <!-- Header Section -->
+    <!-- ======= Header Section Starts ======= -->
     <header class="fade-in">
+        <!-- Logo -->
         <div class="logo">Abhay<span>.</span></div>
 
+        <!-- Navigation Bar -->
         <nav>
             <ul>
+                <!-- Navigation links using Django 'url' template tag -->
                 <li><a href="{% url 'index' %}" class="btn">Home</a></li>
                 <li><a href="{% url 'about' %}" class="btn">About</a></li>
                 <li><a href="{% url 'education' %}" class="btn">Education</a></li>
                 <li><a href="{% url 'contact' %}" class="btn">Contact</a></li>
-                <li><a href="#" class="btn">Hire Me</a></li>
+                <li><a href="#" class="btn">Hire Me</a></li> <!-- Placeholder for future -->
             </ul>
         </nav>
     </header>
+    <!-- ======= Header Section Ends ======= -->
 
-     <!-- This is where index.html or other pages inject their content -->
+    <!-- ======= Dynamic Content Section ======= -->
     {% block content %}
-    
+    <!-- Pages like index.html, about.html will inject their content here -->
     {% endblock %}
 
 </body>
