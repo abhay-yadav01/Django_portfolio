@@ -15,6 +15,7 @@ def about_me(request):
 
 def education(request):
     return render(request, 'education.html')
+
 # def contact(request):
 #     return render(request, 'contact.html')
 
@@ -22,18 +23,8 @@ def contact_view(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            contact = form.save()
-
-            # Send Thank You Email
-            send_mail(
-                'Thanks for reaching out!',
-                f"Hi {contact.first_name},\n\nThanks for contacting me. I’ll get back to you soon!\n\n– Abhay",
-                settings.EMAIL_HOST_USER,
-                [contact.email],
-                fail_silently=False,
-            )
-
-            return redirect('thank_you')  # You can create a thank you page
+            form.save()
+            return redirect('contact')  # or redirect to a success page
     else:
         form = ContactForm()
     return render(request, 'contact.html', {'form': form})

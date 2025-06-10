@@ -18,7 +18,10 @@
                 <p>I’m a passionate Python developer with strong skills in programming, OOP, SQL, file handling, and database connections. I also create tech content as a YouTuber. Let’s build something awesome together!</p>
                 <form method="POST">
                     {% csrf_token %}
-                    <div class="input-row">
+                    {{ form.as_p }}
+                    <button type="submit">Send message</button>
+                    {% comment %}{% csrf_token %}
+                     <div class="input-row">
                         <input type="text" placeholder="Firstname" required>
                         <input type="text" placeholder="Lastname" required>
                     </div>
@@ -31,9 +34,9 @@
                         <option value="web">Web Development</option>
                         <option value="design">UI/UX Design</option>
                     </select>
-                    <textarea placeholder="Type your message here." rows="5" required></textarea>
-                    {% comment %} {{ form.as_p }} {% endcomment %}
-            <button type="submit">Send message</button>
+                    <textarea placeholder="Type your message here." rows="5" required></textarea> 
+                    {% comment %} {{ form.as_p }} 
+            <button type="submit">Send message</button> {% endcomment %}
         </form>
     </div>
     
