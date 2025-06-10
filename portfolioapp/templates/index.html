@@ -2,26 +2,48 @@
 {% load static %}
 
 {% block content %}
+
+<!-- ======= Hero Section (Landing Page) ======= -->
 <section class="hero-section fade-in-up">
 
+    <!-- ===== Left Side: Text and Social Links ===== -->
     <div class="left-content slide-in-left">
+
+        <!-- Subtitle -->
         <p class="subtitle">Software Developer</p>
+
+        <!-- Main Heading -->
         <h1>Hello I’m <span><br>Abhay Yadav</span></h1>
+
+        <!-- Short Bio -->
         <p class="description">
             Skilled in Python programming with basic Django knowledge.<br>
-                Excited to explore Odoo and share tech content as a YouTuber.
+            Excited to explore Odoo and share tech content as a YouTuber.
         </p>
 
+        <!-- CTA Buttons and Social Icons -->
         <div class="buttons">
+
+            <!-- Download Resume Button -->
             <a href="{% static 'files/Abhay_Yadav_CV.pdf' %}" download class="download-btn">Download CV</a>
+
+            <!-- Social Media Icons -->
             <div class="social-icons">
-                <a href="https://github.com/abhay-yadav01"><img src="{% static 'icons/icons8-github.png' %}" alt="GitHub"></a>
-                <a href="https://www.linkedin.com/in/abhay-yadav-58b552366/"><img src="{% static 'icons/linkedin.png' %}" alt="LinkedIn"></a>
-                <a href="https://www.youtube.com/@my_vibes0o1"><img src="{% static 'icons/icons8-youtube.png' %}" alt="YouTube"></a> 
+                <a href="https://github.com/abhay-yadav01" target="_blank">
+                    <img src="{% static 'icons/icons8-github.png' %}" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/abhay-yadav-58b552366/" target="_blank">
+                    <img src="{% static 'icons/linkedin.png' %}" alt="LinkedIn">
+                </a>
+                <a href="https://www.youtube.com/@my_vibes0o1" target="_blank">
+                    <img src="{% static 'icons/icons8-youtube.png' %}" alt="YouTube">
+                </a>
             </div>
+
         </div>
     </div>
 
+    <!-- ===== Right Side: Profile Image ===== -->
     <div class="right-content slide-in-right">
         <div class="profile-glow">
             <img src="{% static 'images/profile.gif' %}" alt="Profile Image">
@@ -30,12 +52,33 @@
 
 </section>
 
+<!-- ======= Info Section: Stats Boxes ======= -->
 <section class="info-section fade-in-up-delayed">
-    <div class="info-box"><strong>6</strong><span>Month of<br>Experience</span></div>
-    <div class="info-box"><strong>2</strong><span>Projects<br>Completed</span></div>
-    <div class="info-box"><strong>6</strong><span>Technologies<br>Mastered</span></div>
-    <div class="info-box"><strong>50+</strong><span>Code<br>Commits</span></div>
-</section>
 
+    <!-- Experience -->
+    <div class="info-box">
+        <strong>6</strong>
+        <span>Month of<br>Experience</span>
+    </div>
+
+    <!-- Projects -->
+    <div class="info-box">
+        <strong>2</strong>
+        <span>Projects<br>Completed</span>
+    </div>
+
+    <!-- Technologies -->
+    <div class="info-box">
+        <strong>6</strong>
+        <span>Technologies<br>Mastered</span>
+    </div>
+
+    <!-- Git Commits -->
+    <div class="info-box">
+        <strong>365+</strong>
+        <span>Code<br>Commits</span>
+    </div>
+
+</section>
 
 {% endblock %}
