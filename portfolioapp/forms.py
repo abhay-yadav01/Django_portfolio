@@ -12,6 +12,9 @@ class ContactForm(forms.ModelForm):
             'phone': forms.TextInput(attrs={'placeholder': 'Phone number'}),
             'service': forms.Select(choices=[
                 ('', 'Select a service'),
+                ('python', 'Pyhton Devlopment'),
+                ('Java', 'Java Devlopment'),
+                ('SQL', "Relational database"),
                 ('web', 'Web Development'),
                 ('design', 'UI/UX Design'),
             ]),
