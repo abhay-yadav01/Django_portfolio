@@ -34,6 +34,8 @@
 
 
 ## 🎬 Demo Preview
+https://github.com/user-attachments/assets/cb50c1fb-d420-4147-8077-ab1c87cac260
+
 
 ![image](https://github.com/user-attachments/assets/7d3ccea5-e8eb-4938-b3d3-9eee0ba6484c)
 
