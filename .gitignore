@@ -1,5 +1,17 @@
-*.pyc
-__pycache__/
+# Ignore SQLite DB
 db.sqlite3
+
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+
+# Ignore Django secrets
 .env
+
+# Ignore static and media files if auto-generated
 /staticfiles/
+/media/
+
+# Ignore VSCode or system files
+.vscode/
+*.DS_Store
