@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import ContactForm
 from django.core.mail import send_mail
 from django.conf import settings
+from .models import Feedback
 
 # Create your views here.
 def index(request):
@@ -28,3 +29,17 @@ def contact_view(request):
     else:
         form = ContactForm()
     return render(request, 'contact.html', {'form': form})
+
+def feedback_form(request):
+    return render(request, 'feedback.html')
+
+def submit_feedback(request):
+    if request.method == 'POST':
+        Feedback.objects.create(
+            name=request.POST['name'],
+            email=request.POST.get('email', ''),
+            message=request.POST['message'],
+            rating=request.POST.get('rating', 0)
+        )
+        return render(request, 'thankyou.html')  # Create a thank you page
+    return redirect('feedback')
