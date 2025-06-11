@@ -35,11 +35,17 @@ def feedback_form(request):
 
 def submit_feedback(request):
     if request.method == 'POST':
+        rating = request.POST.get('rating')
+        try:
+            rating = int(rating)
+        except (TypeError, ValueError):
+            rating = 0
+
         Feedback.objects.create(
             name=request.POST['name'],
             email=request.POST.get('email', ''),
             message=request.POST['message'],
-            rating=request.POST.get('rating', 0)
+            rating=rating
         )
-        return render(request, 'thankyou.html')  # Create a thank you page
+        return render(request, 'thankyou.html')
     return redirect('feedback')
