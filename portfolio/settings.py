@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-klsp270auf8g-y(kb!$4_=5aiz*yxz9tofxm5kv^_yiex$nt1^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['portfolioapp.onrender.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['abhay-yadav-portfolio.onrender.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
