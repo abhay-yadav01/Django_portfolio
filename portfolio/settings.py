@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 import os
+from re import DEBUG
 import dj_database_url
 from pathlib import Path 
 
@@ -25,9 +26,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-klsp270auf8g-y(kb!$4_=5aiz*yxz9tofxm5kv^_yiex$nt1^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+if DEBUG:
+    ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+else:
+    ALLOWED_HOSTS = ['portfolioapp.onrender.com']
 
-ALLOWED_HOSTS = ['portfolioapp.onrender.com']
+# ALLOWED_HOSTS = ['portfolioapp.onrender.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
