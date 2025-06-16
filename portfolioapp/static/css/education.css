@@ -128,6 +128,7 @@ p.description {
 .place, .duration {
     font-size: 0.95rem;
     color: #cbd5e0;
+    cursor: pointer;
 }
 
 .experience-points {
