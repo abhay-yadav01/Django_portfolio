@@ -1,0 +1,153 @@
+/* Base Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', monospace;
+    background-color: #0a0a1a;
+    color: #ffffff;
+}
+
+/* Feedback Container */
+.feedback-container {
+    width: 90%;
+    max-width: 550px; /* Medium size */
+    background: #121232;
+    border: 2px solid #00ffcc;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+    padding: 30px 25px;
+
+    /* Fully Centered on Screen */
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    animation: fadeIn 0.7s ease forwards;
+}
+
+/* Header */
+.feedback-container h2 {
+    text-align: center;
+    color: #00ffcc;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #7fffd4;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 15px;
+    background-color: #0a0a1a;
+    color: #ffffff;
+    border: 1px solid #2a2a40;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #00ffcc;
+    box-shadow: 0 0 8px rgba(0, 255, 204, 0.4);
+    outline: none;
+}
+
+/* Submit Button */
+.submit-btn {
+    background: linear-gradient(to right, #00ffcc, #00ffa3);
+    color: #000;
+    border: none;
+    padding: 14px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(to right, #00ffa3, #00ffcc);
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.6);
+}
+
+/* Star Rating */
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 28px;
+    color: #444;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: #ffc107;
+    transform: scale(1.1);
+}
+
+.star-rating input[type="radio"]:checked ~ label {
+    color: #ffc107;
+}
+
+/* Thank You Message */
+.feedback-message {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #00ffcc;
+    animation: sparkleFade 1.8s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.98);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes sparkleFade {
+    0% { opacity: 0; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.1); }
+    100% { opacity: 0; transform: scale(0.9); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .feedback-container {
+        width: 95%;
+        padding: 20px;
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin: 50px auto;
+    }
+}

@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0d0d1a;
+    color: #ffffff;
+    height: 80vh;
+}
+
+.thankyou-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.thankyou-card {
+    background-color: #1e1e3f;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0, 255, 204, 0.3);
+    border: 2px solid #00ffcc;
+    color: white;
+    transition: all 0.4s ease;
+    transform: scale(1);
+}
+
+.thankyou-card:hover {
+    box-shadow: 0 0 40px rgba(0, 255, 204, 0.6), 0 0 10px #00ffa3;
+    transform: scale(1.03);
+    border-color: #00ffa3;
+}
+
+.thankyou-card h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #00ffcc;
+}
+
+.thankyou-card p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #d0f0f9;
+}
+
+.back-home-btn {
+    background: linear-gradient(to right, #00ffcc, #00ffa3);
+    color: #000;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.6);
+}
+
+.back-home-btn:hover {
+    background: linear-gradient(to right, #00ffa3, #00ffcc);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.8);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
